@@ -10,7 +10,8 @@
 #import "YTKNet/LoginApi.h"
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UITextView *label;
+
 
 @end
 
@@ -32,19 +33,20 @@
     }];
 }
 - (IBAction)homeBtnClick:(id)sender {
+    NSDictionary *parm = @{@"page" : @"1",
+                           @"size" : @"10"
+                           };
+    LoginApi *login = [[LoginApi alloc] initWithParm:parm type:(URLAPITypeHome)];
+    [login startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+        NSError *parseError = nil;
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:request.responseObject options:NSJSONWritingPrettyPrinted error:&parseError];
+        
+        self.label.text =  [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+        
+    }];
 }
-//-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    LoginApi *login = [[LoginApi alloc] initWithParm:@{}];
-//    if ([login loadCacheWithError:nil]) {
-//         NSDictionary *json = [login responseJSONObject];
-//    }
-//    [login startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
-//
-//    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
-//
-//    }];
-//
-//}
+
 
 
 @end

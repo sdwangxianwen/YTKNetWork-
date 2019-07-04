@@ -19,6 +19,7 @@
 		219F4A5922CDD7AC00DE9560 /* YTKUrlArgumentsFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 219F4A5822CDD7AC00DE9560 /* YTKUrlArgumentsFilter.m */; };
 		219F4A5C22CDDA1800DE9560 /* LoginApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 219F4A5B22CDDA1800DE9560 /* LoginApi.m */; };
 		219F4A5F22CDDC0F00DE9560 /* NSString+ppstring.m in Sources */ = {isa = PBXBuildFile; fileRef = 219F4A5E22CDDC0E00DE9560 /* NSString+ppstring.m */; };
+		219F4A6222CDFB4100DE9560 /* YTKNetworkAgent+dt_Agent.m in Sources */ = {isa = PBXBuildFile; fileRef = 219F4A6122CDFB4100DE9560 /* YTKNetworkAgent+dt_Agent.m */; };
 		2E84E5041F5F5B07D18BB102 /* libPods-YTKUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5530EF2F806C6F81C1D3A06 /* libPods-YTKUITests.a */; };
 		4A86333C65D06D6A084374DF /* libPods-YTK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE742009EC3C3963F86ECFDD /* libPods-YTK.a */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,8 @@
 		219F4A5B22CDDA1800DE9560 /* LoginApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginApi.m; sourceTree = "<group>"; };
 		219F4A5D22CDDC0E00DE9560 /* NSString+ppstring.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+ppstring.h"; sourceTree = "<group>"; };
 		219F4A5E22CDDC0E00DE9560 /* NSString+ppstring.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+ppstring.m"; sourceTree = "<group>"; };
+		219F4A6022CDFB4100DE9560 /* YTKNetworkAgent+dt_Agent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YTKNetworkAgent+dt_Agent.h"; sourceTree = "<group>"; };
+		219F4A6122CDFB4100DE9560 /* YTKNetworkAgent+dt_Agent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "YTKNetworkAgent+dt_Agent.m"; sourceTree = "<group>"; };
 		6D0A0467530C28332A854E2A /* Pods-YTKUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YTKUITests.debug.xcconfig"; path = "Target Support Files/Pods-YTKUITests/Pods-YTKUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		99AB5C8D2748553E80D6EC96 /* libPods-YTKTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YTKTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38261CD957AE7E4671A1225 /* Pods-YTKUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YTKUITests.release.xcconfig"; path = "Target Support Files/Pods-YTKUITests/Pods-YTKUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -168,6 +171,8 @@
 				219F4A5B22CDDA1800DE9560 /* LoginApi.m */,
 				219F4A5D22CDDC0E00DE9560 /* NSString+ppstring.h */,
 				219F4A5E22CDDC0E00DE9560 /* NSString+ppstring.m */,
+				219F4A6022CDFB4100DE9560 /* YTKNetworkAgent+dt_Agent.h */,
+				219F4A6122CDFB4100DE9560 /* YTKNetworkAgent+dt_Agent.m */,
 			);
 			path = YTKNet;
 			sourceTree = "<group>";
@@ -403,6 +408,7 @@
 				219F4A3322CDD58D00DE9560 /* main.m in Sources */,
 				219F4A5F22CDDC0F00DE9560 /* NSString+ppstring.m in Sources */,
 				219F4A2522CDD58B00DE9560 /* AppDelegate.m in Sources */,
+				219F4A6222CDFB4100DE9560 /* YTKNetworkAgent+dt_Agent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

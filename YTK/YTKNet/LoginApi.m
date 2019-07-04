@@ -25,10 +25,12 @@
     appVersion = [appVersion stringByReplacingOccurrencesOfString:@"." withString:@""];
     switch (self.URLAPIType) {
         case URLAPITypeLogin:
-            return [NSString stringWithFormat:@"/v%@/public/sms",appVersion];
+           
+            return  [[NSString stringWithFormat:@"v%@/public/sms",appVersion] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
             break;
         case URLAPITypeHome:
-            return @"public/login";
+            return   [[NSString stringWithFormat:@"v%@/home/select",appVersion] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+
         default:
             return @"public/login";
             break;
@@ -38,6 +40,15 @@
 -(YTKRequestMethod)requestMethod {
     return YTKRequestMethodPOST;
 }
+-(YTKResponseSerializerType)responseSerializerType {
+    return YTKResponseSerializerTypeJSON;
+}
+//- (YTKRequestSerializerType)requestSerializerType {
+//    return YTKRequestSerializerTypeHTTP;
+//}
+//- (NSTimeInterval)requestTimeoutInterval {
+//    return 10;
+//}
 -(id)requestArgument {
    
     return [self getSign:_parm];
@@ -45,6 +56,7 @@
 -(NSInteger)cacheTimeInSeconds {
     return 0;
 }
+
 -(NSDictionary *)getSign:(NSDictionary *)parm {
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     dict = parm.mutableCopy;
